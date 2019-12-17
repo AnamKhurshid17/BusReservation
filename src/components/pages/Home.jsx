@@ -37,14 +37,14 @@ class Home extends Component {
               </div>
               
               </div>
-            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            {/* <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true"></span>
               <span className="sr-only">Previous</span>
             </a>
             <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
               <span className="carousel-control-next-icon" aria-hidden="true"></span>
               <span className="sr-only">Next</span>
-            </a>
+            </a> */}
           </div>
 
 <div className="booking_form">
@@ -54,7 +54,8 @@ class Home extends Component {
                                                     alignItems: 'center',
                                                     position: 'absolute',
                                                     width: '100%',
-                                                    top: 60
+                                                    top: 60,
+                                                    left:30
                                                     
                                                   }}>
               <div class="container-fluid" >
