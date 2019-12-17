@@ -35,7 +35,7 @@ import {Link} from 'react-router-dom';// Router will work with the link here ins
                             </p>
                             <Image src="assets/googleplay.png" width="80" height="35"  className="img-responsive"/>
                                 <span> &nbsp; </span>
-                            <Image src="assets/ios.png" width="80" height="35" classNAme="img-responsive"/>
+                            <Image src="assets/ios.png" width="80" height="35" className="img-responsive"/>
                         </div>
 
                     </div>  
