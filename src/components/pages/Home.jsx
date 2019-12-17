@@ -17,7 +17,7 @@ class Home extends Component {
   render(){
     
     return (
-      <div>
+      <div className="parent_class">
       <div className="carouselcontainer">
           <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
@@ -47,13 +47,14 @@ class Home extends Component {
             </a>
           </div>
 
+<div className="booking_form">
           <div class="vertical-center" style={{
                                                     minHeight: '100%',
                                                     display: 'flex',
                                                     alignItems: 'center',
                                                     position: 'absolute',
                                                     width: '100%',
-                                                    top: 0
+                                                    top: 60
                                                     
                                                   }}>
               <div class="container-fluid" >
@@ -102,6 +103,7 @@ class Home extends Component {
         </div>
       </div>
     </div>
+  </div>
   </div>
           </div>
           {/* carousel ended here */}
