@@ -2,347 +2,376 @@ import React, {Component} from 'react';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
-import styled from 'styled-components';
+ import styled from 'styled-components';
 const products = [
   {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1600,
       "stops":1,
       "available_seats":0,
-      "status":"Unavailable"
+      "status":"Unavailable",
+      "booking": false
+
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1600,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
   
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1600,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1600,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1600,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
   
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1600,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
      {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1600,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1600,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
   
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1600,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1600,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1600,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
   
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1600,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
   
   
@@ -353,255 +382,276 @@ const products = [
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1600,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1600,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
   
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1600,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+       "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1600,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1600,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Gold Class",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1600,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1500,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -609,169 +659,183 @@ const products = [
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1500,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1500,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -779,85 +843,92 @@ const products = [
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1500,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
   
   
@@ -865,85 +936,92 @@ const products = [
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1500,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -951,169 +1029,183 @@ const products = [
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1500,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1500,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -1121,85 +1213,92 @@ const products = [
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1600,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1600,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1600,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1500,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
   
   
@@ -1207,426 +1306,461 @@ const products = [
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1900,
       "stops":"0",
       "available_seats":"0",
-      "status":"Unavailable"
+     "status":"Unavailable",
+      "booking": false
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1900,
       "stops":"0",
       "available_seats":"0",
-      "status":"Unavailable"
+     "status":"Unavailable",
+      "booking": false
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1900,
       "stops":"0",
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1900,
       "stops":"0",
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1900,
       "stops":"0",
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1900,
       "stops":"0",
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1900,
       "stops":"0",
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1900,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1900,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1900,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1900,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1900,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1900,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1900,
       "stops":"0",
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
      {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1900,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1900,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1900,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1900,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1900,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1900,
       "stops":"0",
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1900,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1900,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1900,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1900,
       "stops":1,
       "available_seats":"0",
-      "status":"Unavailable"
+     "status":"Unavailable",
+      "booking": false
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1900,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1900,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1900,
       "stops":"0",
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Gold Class",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1900,
       "stops":"0",
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
   
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":3000,
       "stops":2,
       "available_seats":"0",
-      "status":"Unavailable"
+     "status":"Unavailable",
+      "booking": false
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":2900,
       "stops":2,
       "available_seats":"0",
-      "status":"Unavailable"
+     "status":"Unavailable",
+      "booking": false
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":2800,
       "stops":2,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":2800,
       "stops":2,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":2800,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":2800,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":2800,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -1634,169 +1768,183 @@ const products = [
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":2800,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":2800,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":2800,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":2800,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":2800,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":2900,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":2800,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":2900,
       "stops":2,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":2900,
       "stops":2,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":2900,
       "stops":2,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":2900,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":2800,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":2800,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":2800,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -1804,85 +1952,92 @@ const products = [
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":2900,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":2800,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":2800,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":2800,
       "stops":2,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":2800,
       "stops":2,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":2800,
       "stops":2,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Gold Class",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":2800,
       "stops":3,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
 
 
@@ -1890,341 +2045,369 @@ const products = [
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1200,
       "stops":1,
-      "available_seats":0,
-      "status":"Unavailable"
+      "available_seats":0, 
+     "status":"Unavailable",
+      "booking": false
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1200,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1200,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1200,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1200,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1200,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
      {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1200,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1200,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1200,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1200,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1200,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1200,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -2235,255 +2418,276 @@ const products = [
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1200,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1200,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1200,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1200,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1200,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Luxury",
       "source":"Lahore",
       "destination":"Islamabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1200,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1100,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -2491,169 +2695,183 @@ const products = [
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1100,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1100,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -2661,85 +2879,92 @@ const products = [
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Lahore",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1100,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
   
   
@@ -2747,85 +2972,92 @@ const products = [
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1100,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -2833,169 +3065,183 @@ const products = [
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1100,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1100,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -3003,85 +3249,92 @@ const products = [
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":910,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":910,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1200,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1200,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1200,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Faisalabad",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1100,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
   
   
@@ -3089,426 +3342,461 @@ const products = [
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1650,
       "stops":"0",
       "available_seats":"0",
-      "status":"Unavailable"
+     "status":"Unavailable",
+      "booking": false
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1650,
       "stops":"0",
       "available_seats":"0",
-      "status":"Unavailable"
+     "status":"Unavailable",
+      "booking": false
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1650,
       "stops":"0",
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1650,
       "stops":"0",
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1650,
       "stops":"0",
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1650,
       "stops":"0",
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1650,
       "stops":"0",
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1650,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1650,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1650,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1650,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1650,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1650,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1650,
       "stops":"0",
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
      {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1650,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1650,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1650,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1650,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1650,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1650,
       "stops":"0",
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1650,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":1650,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":1650,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":1650,
       "stops":1,
       "available_seats":"0",
-      "status":"Unavailable"
+     "status":"Unavailable",
+      "booking": false
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":1650,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":1650,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":1650,
       "stops":"0",
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
     {
       "bus_type":"Luxury",
       "source":"Faisalabad",
       "destination":"Islamabad",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":1650,
       "stops":"0",
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
   
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":2650,
       "stops":2,
       "available_seats":"0",
-      "status":"Unavailable"
+     "status":"Unavailable",
+      "booking": false
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":2550,
       "stops":2,
       "available_seats":"0",
-      "status":"Unavailable"
+     "status":"Unavailable",
+      "booking": false
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":2450,
       "stops":2,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":2450,
       "stops":2,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":2450,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":2450,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"13/02/2020",
+      "ddate":"13/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":2450,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -3516,169 +3804,183 @@ const products = [
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":2450,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":2450,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":2450,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":2450,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":2450,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":2550,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"14/02/2020",
+      "ddate":"14/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":2450,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     },
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":2550,
       "stops":2,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":2550,
       "stops":2,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":2550,
       "stops":2,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":2550,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":2450,
       "stops":1,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":2450,
       "stops":1,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"15/02/2020",
+      "ddate":"15/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":2450,
       "stops":1,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
   
   
@@ -3686,85 +3988,92 @@ const products = [
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"8:00",
       "arrival_time":"13:30",
       "fare":2550,
       "stops":1,
       "available_seats":43,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"9:30",
       "arrival_time":"15:30",
       "fare":2450,
       "stops":1,
       "available_seats":33,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"10:30",
       "arrival_time":"16:30",
       "fare":2450,
       "stops":1,
       "available_seats":24,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"12:30",
       "arrival_time":"18:30",
       "fare":2450,
       "stops":2,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"14:30",
       "arrival_time":"20:30",
       "fare":2450,
       "stops":2,
       "available_seats":44,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"16:30",
       "arrival_time":"22:30",
       "fare":2450,
       "stops":2,
       "available_seats":23,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
     {
       "bus_type":"Luxury",
       "source":"Islamabad",
       "destination":"Multan",
-      "date":"16/02/2020",
+      "ddate":"16/02/2020",
       "departure_time":"18:30",
       "arrival_time":"00:30",
       "fare":2450,
       "stops":3,
       "available_seats":45,
-      "status":"OK"
+      "status":"OK",
+      "booking": true
     }, 
 
 
@@ -3773,341 +4082,368 @@ const products = [
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":810,
   "stops":1,
-  "available_seats":0,
-  "status":"Unavailable"
+  "available_seats":0, "booking": false,
+ "status":"Unavailable"
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":810,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":810,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":810,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":810,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":810,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
  {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":810,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":810,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":810,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":810,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":810,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":810,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 
@@ -4118,255 +4454,276 @@ const products = [
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":810,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":810,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":810,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":810,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":810,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 {
   "bus_type":"Normal",
   "source":"Lahore",
   "destination":"Islamabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":810,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":910,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":910,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":750,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 
@@ -4374,169 +4731,183 @@ const products = [
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":910,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":910,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":750,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 },
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":910,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":910,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":750,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 
@@ -4544,85 +4915,92 @@ const products = [
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":910,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":910,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Lahore",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":750,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 },
 
 
@@ -4630,85 +5008,92 @@ const products = [
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":910,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":910,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":750,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 
@@ -4716,169 +5101,183 @@ const products = [
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":910,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":910,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":750,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 },
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":910,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":910,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":750,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 
@@ -4886,85 +5285,92 @@ const products = [
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":910,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":910,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":810,
   "stops":1,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":810,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":810,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Faisalabad",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":750,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 },
 
 
@@ -4972,426 +5378,461 @@ const products = [
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":950,
   "stops":"0",
   "available_seats":"0",
-  "status":"Unavailable"
+ "status":"Unavailable",
+      "booking": false
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":950,
   "stops":"0",
   "available_seats":"0",
-  "status":"Unavailable"
+ "status":"Unavailable",
+      "booking": false
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":950,
   "stops":"0",
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":950,
   "stops":"0",
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":950,
   "stops":"0",
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":950,
   "stops":"0",
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":950,
   "stops":"0",
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":950,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":950,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":950,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":950,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":950,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":950,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":950,
   "stops":"0",
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
  {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":950,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":950,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":950,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":950,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":950,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":950,
   "stops":"0",
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":950,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":950,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":950,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":950,
   "stops":1,
   "available_seats":"0",
-  "status":"Unavailable"
+ "status":"Unavailable",
+      "booking": false
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":950,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":950,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":950,
   "stops":"0",
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 {
   "bus_type":"Normal",
   "source":"Faisalabad",
   "destination":"Islamabad",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":950,
   "stops":"0",
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 },
 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":1800,
   "stops":2,
   "available_seats":"0",
-  "status":"Unavailable"
+ "status":"Unavailable",
+      "booking": false
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":1800,
   "stops":2,
   "available_seats":"0",
-  "status":"Unavailable"
+ "status":"Unavailable",
+      "booking": false
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":1600,
   "stops":2,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":1600,
   "stops":2,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":1600,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":1600,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"13/02/2020",
+  "ddate":"13/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":1500,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 
 
@@ -5399,253 +5840,274 @@ const products = [
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":1800,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":1800,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":1600,
   "stops":1,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":1600,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":1600,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":1600,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"14/02/2020",
+  "ddate":"14/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":1500,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 },
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":1800,
   "stops":2,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":1800,
   "stops":2,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":1600,
   "stops":2,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":1600,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":1600,
   "stops":1,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":1600,
   "stops":1,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"15/02/2020",
+  "ddate":"15/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":1500,
   "stops":1,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"8:00",
   "arrival_time":"13:30",
   "fare":1800,
   "stops":1,
   "available_seats":43,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"9:30",
   "arrival_time":"15:30",
   "fare":1800,
   "stops":1,
   "available_seats":33,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"10:30",
   "arrival_time":"16:30",
   "fare":1600,
   "stops":1,
   "available_seats":24,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"12:30",
   "arrival_time":"18:30",
   "fare":1600,
   "stops":2,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"14:30",
   "arrival_time":"20:30",
   "fare":1600,
   "stops":2,
   "available_seats":44,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"16:30",
   "arrival_time":"22:30",
   "fare":1600,
   "stops":2,
   "available_seats":23,
-  "status":"OK"
+  "status":"OK",
+      "booking": true
 }, 
 {
   "bus_type":"Normal",
   "source":"Islamabad",
   "destination":"Multan",
-  "date":"16/02/2020",
+  "ddate":"16/02/2020",
   "departure_time":"18:30",
   "arrival_time":"00:30",
   "fare":1500,
   "stops":3,
   "available_seats":45,
-  "status":"OK"
+  "status":"OK",
+  "booking": true
 }
 ];
 class Schedule extends Component  {
@@ -5731,14 +6193,14 @@ class Schedule extends Component  {
           <TableHeaderColumn headerAlign="center" dataField='bus_type' dataAlign='left'  isKey={ true } dataSort={ true }>Bus Type</TableHeaderColumn>
           <TableHeaderColumn headerAlign="center" dataField='source' dataAlign='left'>Source</TableHeaderColumn>
            <TableHeaderColumn headerAlign="center" dataField='destination' dataAlign='left' >Destination</TableHeaderColumn>
-          <TableHeaderColumn headerAlign="center" dataField='date' dataAlign='left' >Date</TableHeaderColumn>
+          <TableHeaderColumn headerAlign="center" dataField='ddate' dataAlign='left' >Date</TableHeaderColumn>
           <TableHeaderColumn headerAlign="center" width={'10%'} dataField='departure_time' dataAlign='left' >Departure Time</TableHeaderColumn>
           <TableHeaderColumn headerAlign="center" dataField='arrival_time' dataAlign='left' >Arrival Time</TableHeaderColumn>
           <TableHeaderColumn headerAlign="center" width={'5%'} dataField='stops' dataAlign='left' >Stops</TableHeaderColumn>
           <TableHeaderColumn headerAlign="center" width={'10%'} dataField='available_seats' dataAlign='left' >Available Seats</TableHeaderColumn>
           <TableHeaderColumn headerAlign="center" dataField='status' dataAlign='left' >Status</TableHeaderColumn>       
           <TableHeaderColumn headerAlign="center" dataField='fare' dataAlign='left'  dataSort={ true }>Fare</TableHeaderColumn>
-          <TableHeaderColumn headerAlign="center" dataAlign='left' >Booking</TableHeaderColumn>
+          <TableHeaderColumn headerAlign="center" dataField='booking' dataAlign='left' >Booking</TableHeaderColumn>
           
              </BootstrapTable>
 
@@ -5751,12 +6213,14 @@ class Schedule extends Component  {
     
 export default Schedule;
 const ScheduleContainer = styled.div`
-
-
 .react-bootstrap-table-pagination-total{
   backgroundColor: '#ffff';
-
 }
 
+// .react-bootstrap-table-pagination-total{
+//   backgroundColor: '#ffff';
 
-`
+// }
+
+
+// `
