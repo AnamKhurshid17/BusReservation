@@ -2,12 +2,105 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 class Booking extends Component {
-   
+  constructor() {
+    super();
+    this.state = {
+      fields: {},
+      errors: {}
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.submituserRegistrationForm = this.submituserRegistrationForm.bind(this);
+
+  };
+  handleChange(e) {
+    let fields = this.state.fields;
+    fields[e.target.name] = e.target.value;
+    this.setState({
+      fields
+    });
+
+  }
+
+  submituserRegistrationForm(e) {
+    e.preventDefault();
+    if (this.validateForm()) {
+        let fields = {};
+        fields["username"] = "";
+        fields["emailid"] = "";
+        fields["mobileno"] = "";
+        fields["password"] = "";
+        this.setState({fields:fields});
+        alert("Form submitted");
+    }
+  }
+  validateForm() {
+
+    let fields = this.state.fields;
+    let errors = {};
+    let formIsValid = true;
+
+    if (!fields["username"]) {
+      formIsValid = false;
+      errors["username"] = "*Please enter your username.";
+    }
+
+    if (typeof fields["username"] !== "undefined") {
+      if (!fields["username"].match(/^[a-zA-Z ]*$/)) {
+        formIsValid = false;
+        errors["username"] = "*Please enter alphabet characters only.";
+      }
+    }
+
+    if (!fields["emailid"]) {
+      formIsValid = false;
+      errors["emailid"] = "*Please enter your email-ID.";
+    }
+    if (typeof fields["emailid"] !== "undefined") {
+      //regular expression for email validation
+      var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+      if (!pattern.test(fields["emailid"])) {
+        formIsValid = false;
+        errors["emailid"] = "*Please enter valid email-ID.";
+      }
+    }
+
+    if (!fields["mobileno"]) {
+      formIsValid = false;
+      errors["mobileno"] = "*Please enter your mobile no.";
+    }
+
+    if (typeof fields["mobileno"] !== "undefined") {
+      if (!fields["mobileno"].match(/^[0-9]{11}$/)) {
+        formIsValid = false;
+        errors["mobileno"] = "*Please enter valid mobile no.";
+      }
+    }
+
+    if (!fields["cnic"]) {
+      formIsValid = false;
+      errors["cnic"] = "*Please enter your cnic no.";
+    }
+
+    if (typeof fields["cnic"] !== "undefined") {
+      if (!fields["cnic"].match(/^[0-9]{13}$/)) {
+        formIsValid = false;
+        errors["cnic"] = "*Please enter valid cnic.";
+      }
+    }
+
+    this.setState({
+      errors: errors
+    });
+    return formIsValid;
+
+  }
+
     render(){
     return (
         <div>
-        <div className="my-5 p-5">
-        <div className="row">
+        {/* <div className="my-5 p-5"> */}
+        {/* <div className="row">
         <div className="col-md-1">
 
         </div>
@@ -38,7 +131,7 @@ class Booking extends Component {
                  </div>
           </div>
       
-        </div>
+        </div> */}
         <div className="row">
         <div className="col-md-1"> 
 
@@ -46,28 +139,33 @@ class Booking extends Component {
         <div className="col-md-6"> 
             <div className="p-5">
             <h4 ><strong>User Details</strong></h4>
-                        <form>
+                        <form method="post"  name="userRegistrationForm"  onSubmit= {this.submituserRegistrationForm}>
                            <div className="form-group">
-                               <input type="text" className="form-control" placeholder="Name"/>
+                               <input type="text" name="username" className="form-control" value={this.state.fields.username} onChange={this.handleChange} placeholder="Name" required="required"/>
+                               <div className="errorMsg">{this.state.errors.username}</div>
                            </div>
 
                            <div className="form-group">
-                               <input type="email" className="form-control" placeholder="Email"/>
+                               <input type="email" name="emailid" value={this.state.fields.emailid} onChange={this.handleChange} className="form-control" placeholder="Email" required="required"/>
+                               <div className="errorMsg">{this.state.errors.emailid}</div>
                            </div>
                            <div className="form-group">
-                               <input type="text" className="form-control" placeholder="CNIC"/>
+                               <input type="text" name="cnic" value={this.state.fields.cnic} onChange={this.handleChange} className="form-control" placeholder="CNIC" required="required"/>
+                               <div className="errorMsg">{this.state.errors.cnic}</div>
                            </div>
 
                            <div className="form-group">
-                               <input type="tel" className="form-control" placeholder="Phone"/>
+                               <input type="tel" name="mobileno" value={this.state.fields.mobileno} onChange={this.handleChange}  className="form-control" placeholder="Phone" required="required"/>
+                               <div className="errorMsg">{this.state.errors.mobileno}</div>
                            </div>
                            <textarea className="form-control" cols="30" rows="5" placeholder="Any special note e.g you have any medical issue"/>
                            <br/>
-                        <Link to="/" className="btn btn-outline-primary text-uppercase" mt-1="true" >
+                        {/* <Link to="/" className="btn btn-outline-primary text-uppercase" mt-1="true" >
                         <i className="fa fa-paper-plane-o" aria-hidden="true"></i>
                         <i className="fab fa-teleram-plane" aria-hidden/>
                         &nbsp;Send
-                        </Link>
+                        </Link> */}
+                        <input type="submit" className="btn btn-outline-primary text-uppercase" mt-1="true" value="Register"/>
                         </form>
                 </div>
                 </div>
@@ -250,6 +348,30 @@ class Booking extends Component {
 }
 export default Booking;
 const SeatReservation =styled.div`
+
+#register, #login {
+  width: 300px;
+  border: 1px solid #d6d7da;
+  padding: 0px 15px 15px 15px;
+  border-radius: 5px;
+  font-family: arial;
+  line-height: 16px;
+  color: #333333;
+  font-size: 14px;
+  background: #ffffff;
+  margin: 100px auto;
+}
+
+.errorMsg {
+  color: #cc0000;
+  margin-bottom: 12px;
+}
+
+.sucessMsg {
+  color: #6B8E23;
+  margin-bottom: 10px;
+}
+
 *,*:before,*:after {
     box-sizing: border-box;
     
