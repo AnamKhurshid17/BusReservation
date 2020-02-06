@@ -12,11 +12,10 @@ import Booking from './components/pages/Booking';
 import Schedule from './components/pages/Schedule';
 import Terminal from './components/pages/Terminal';
 import NotFoundpage from './components/pages/NotFoundpage';
-import data from './data/routess.json';
+import Admin from './components/pages/Admin'
 class App extends Component {
   render(){
   return (
-    
    
       <div>
       
@@ -27,7 +26,8 @@ class App extends Component {
           <Route path="/Schedule" component={Schedule}/>
           <Route path="/Terminal" component={Terminal}/>
           <Route path="/Booking" component={Booking}/>
-          <Route  component={NotFoundpage}/>
+          <Route path="/Admin" component={Admin}/>
+          <Route component={NotFoundpage}/>
         </Switch>
           <Footer/>
       </div>
