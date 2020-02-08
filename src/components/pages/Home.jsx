@@ -3,17 +3,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {Link} from 'react-router-dom';
+import moment from 'moment'; //used to disable previous dates
 // import DatePicker from 'DatePicker';
 class Home extends Component {
+
   state = {
-    startDate: new Date()
+    startDate: new Date(),
   };
+
+
 
   handleChange = date => {
     this.setState({
       startDate: date
     });
   };
+
   render(){
     
     return (
@@ -48,7 +53,7 @@ class Home extends Component {
           </div>
 
 <div className="booking_form">
-          <div class="vertical-center" style={{
+          <div className="vertical-center" style={{
                                                     minHeight: '100%',
                                                     display: 'flex',
                                                     alignItems: 'center',
@@ -58,9 +63,9 @@ class Home extends Component {
                                                     left:30
                                                     
                                                   }}>
-              <div class="container-fluid" >
-                <div class="row">
-                  <div class="col-md-4 col-sm-4 col-xs-12">
+              <div className="container-fluid" >
+                <div className="row">
+                  <div className="col-md-4 col-sm-4 col-xs-12">
                     <form style={{
                                     borderRadius: '15px 15px 15px 15px',
                                     padding: '25px',
@@ -68,33 +73,34 @@ class Home extends Component {
                                     backgroundColor: 'rgba(237, 237, 237, 0.5)',
                                     width: '500px'
                                   }}>
-                      <div class="form-group">
+                      <div className="form-group">
                       <h4><strong>Purchase Ticket</strong></h4>
                       </div>
-                       <div class="form-group">
+                       <div className="form-group">
                             <label for="source">Departure</label>
-                              <select class="form-control" id="source">
-                                <option value="fsb">Faisalabad</option>
-                                <option value="lhr">Lahore</option>
-                                <option value="isb">Islamabad</option>
-                                <option value="mul">Multan</option>
+                              <select className="form-control" id="source" >
+                                <option value="Faisalabad">Faisalabad</option>
+                                <option value="Lahore">Lahore</option>
+                                <option value="Islamabad">Islamabad</option>
+                                <option value="Multan">Multan</option>
                               </select>
                          </div>
-                         <div class="form-group">
+                         <div className="form-group">
                               <label for="destination">Arrival</label>
-                              <select class="form-control" id="destination">
-                               
-                                <option value="lhr">Lahore</option>
-                                <option value="isb">Islamabad</option>
-                                <option value="mul">Multan</option>
-                                <option value="fsb">Faisalabad</option>
+                              <select className="form-control" id="destination" >                               
+                                <option value="Lahore">Lahore</option>
+                                <option value="Islamabad">Islamabad</option>
+                                <option value="Multan">Multan</option>
+                                <option value="Faisalabad">Faisalabad</option>
                               </select>
                            </div>
-                    <div class="form-group">
-                    <DatePicker  selected={this.state.startDate}  onChange={this.handleChange}    />
+                    <div className="form-group">
+                    <DatePicker  selected={this.state.startDate}  onChange={this.handleChange}   
+                          minDate={moment().toDate()}  placeholderText="Select departure day"  />
+                           {/* disable the previous dates */}
                     </div>
                     <div class="form-group" >
-                    <Link className="btn btn-dark text-uppercase" to="/schedule" mt-1 >
+                    <Link className="btn btn-dark text-uppercase" to="/schedule" mt-1  >
                         <i className="fa fa-paper-plane-o" aria-hidden="true"></i>
                         <i className="fab fa-teleram-plane" aria-hidden/>
                         &nbsp;Send

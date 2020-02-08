@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* .unavailable{
+display: none;
+background-color: lightslategrey;
+} */
+.unavailable
+    {
+      pointer-events: none;
+    }

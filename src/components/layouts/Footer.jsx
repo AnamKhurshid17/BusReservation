@@ -12,7 +12,7 @@ import {Link} from 'react-router-dom';// Router will work with the link here ins
                         {/*Columns 1*/}
                         <div className="col-md-3 col-sm-6">
                         <span> &nbsp; &nbsp; &nbsp;</span>
-                            <Image src="assets/navlogo.png" width="220" height="80" className="Navlogo"/>
+                            <Image src="./assets/navlogo.png" width="220" height="80" className="Navlogo"/>
                         </div>
                         {/*Columns 2*/}
                         <div className="col-md-3 col-sm-6">
@@ -33,9 +33,9 @@ import {Link} from 'react-router-dom';// Router will work with the link here ins
                             <p>
                                 Easy Tickets also offers information about upcoming movies, show timings, movie trailers &amp; reviews.
                             </p>
-                            <Image src="assets/googleplay.png" width="80" height="35"  className="img-responsive"/>
+                            <Image src="./assets/googleplay.png" width="80" height="35"  className="img-responsive"/>
                                 <span> &nbsp; </span>
-                            <Image src="assets/ios.png" width="80" height="35" className="img-responsive"/>
+                            <Image src="./assets/ios.png" width="80" height="35" className="img-responsive"/>
                         </div>
 
                     </div>  
